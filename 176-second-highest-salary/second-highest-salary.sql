@@ -1,13 +1,7 @@
 # Write your MySQL query statement below
-SELECT DISTINCT
-    CASE
-        WHEN COUNT(DISTINCT salary) = 0 THEN null
-        ELSE salary
-    END
+SELECT 
+(SELECT DISTINCT salary
+FROM Employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1)
 AS SecondHighestSalary
-FROM Employee EMP
-WHERE (
-    SELECT COUNT(DISTINCT salary)
-    FROM Employee
-    WHERE salary > EMP.salary
-) = 1
