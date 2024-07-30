@@ -1,6 +1,7 @@
 class Solution {
 public:
     int maxArea(vector<int>& h) {
+        ios::sync_with_stdio(0); cin.tie(0);
         int rhs = h.size() - 1;
         int lhs = 0;
         int res = 0;
