@@ -1,6 +1,7 @@
 class Solution {
 public:
     int maxOperations(vector<int>& nums, int k) {
+        ios::sync_with_stdio(0); cin.tie(0);
         sort(nums.begin(), nums.end());
         int res = 0;
         int lhs = 0, rhs = nums.size() - 1;
