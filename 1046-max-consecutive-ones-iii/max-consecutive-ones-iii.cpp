@@ -20,7 +20,6 @@ public:
                 curSum = 0;
             }
 
-            printf("(%d, %d)", i, curSum);
             maxSum = max(maxSum, curSum);
         }
 
