@@ -17,6 +17,7 @@ public:
     }
     
     vector<vector<int>> findDifference(vector<int>& nums1, vector<int>& nums2) {
+        ios::sync_with_stdio(0); cin.tie();
         return {getElementsOnlyInFirstList(nums1, nums2),         
                 getElementsOnlyInFirstList(nums2, nums1)};
     }
