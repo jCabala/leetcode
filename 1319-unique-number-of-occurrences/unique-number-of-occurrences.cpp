@@ -1,6 +1,7 @@
 class Solution {
 public:
     bool uniqueOccurrences(vector<int>& arr) {
+        ios::sync_with_stdio(0); cin.tie(0);
         int negs[1005], poss[1005];
         vector<int> occ;
 
