@@ -1,6 +1,7 @@
 class Solution {
 public:
     int equalPairs(vector<vector<int>>& grid) {
+        ios::sync_with_stdio(0); cin.tie(0);
         int count = 0;
         set<vector<int>> res;
         unordered_map<int, vector<int>> dupe;
