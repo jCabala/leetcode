@@ -12,6 +12,7 @@
 class Solution {
 public:
     int goodNodes(TreeNode* root) {
+        ios::sync_with_stdio(0); cin.tie(0);
         return getGoodNodes(root, -10e4);
     }
 
