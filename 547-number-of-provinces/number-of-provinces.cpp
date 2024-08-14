@@ -1,7 +1,7 @@
 class Solution {
 public:
     int findCircleNum(vector<vector<int>>& isConnected) {
-        ios::sync_with_stdio(0); cin.tie(0);
+       // ios::sync_with_stdio(0); cin.tie(0);
         vector<bool> visited(isConnected.size(), false);
         vector<vector<int>> graph(isConnected.size(), vector<int>());
 
