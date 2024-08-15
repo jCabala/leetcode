@@ -2,6 +2,7 @@ class Solution {
 public:
 int ans;
     int minReorder(int n, vector<vector<int>>& connections) {
+        ios::sync_with_stdio(0); cin.tie(0);
         ans = 0;
         vector<vector<vector<int>>> graph(n, vector<vector<int>>());
 
