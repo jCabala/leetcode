@@ -1,22 +1,13 @@
 class Solution {
 public:
     int tribonacci(int n) {
-       // ios::sync_with_stdio(0); cin.tie(0);
-        int a0 = 0, a1 = 1, a2 = 1,  cur = 2;
+        ios::sync_with_stdio(0); cin.tie(0);
+         int a[]={0,1,1,2,4,7,13,24,44,81,149,274,504,927,
+        1705,3136,5768,10609,19513,35890,66012,121415,223317,
+        410744,755476,1389537,2555757,4700770,8646064,15902591,
+        29249425,53798080,98950096,181997601,334745777,615693474,
+        1132436852,2082876103};
 
-        if (n == 0) return a0;
-        if (n == 1) return a1;
-        if (n == 2) return a2;
-
-        int it = n - 3;
-        while (it > 0) {
-            a0 = a1;
-            a1 = a2;
-            a2 = cur;
-            cur = a0 + a1 + a2;
-            it--;
-        }
-
-        return cur;
+        return a[n];
     }
 };
