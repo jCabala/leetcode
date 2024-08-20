@@ -1,7 +1,7 @@
 class Solution {
 public:
     int tribonacci(int n) {
-        ios::sync_with_stdio(0); cin.tie(0);
+       // ios::sync_with_stdio(0); cin.tie(0);
         int a0 = 0, a1 = 1, a2 = 1,  cur = 2;
 
         if (n == 0) return a0;
