@@ -3,6 +3,7 @@ public:
     int dp[101][101];
 
     int uniquePaths(int m, int n) {
+      ios::sync_with_stdio(0); cin.tie(0);
       int ans = 1, div = 1;
       for (int i = 0; i < n; i++) dp[i][0] = 1;
       for (int i = 0; i < m; i++) dp[0][i] = 1;
