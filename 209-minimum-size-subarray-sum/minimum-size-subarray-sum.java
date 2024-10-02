@@ -11,7 +11,6 @@ class Solution {
         while(frt < n) {
             int bckPref = bck > 0 ? pref[bck - 1] : 0;
             int sum = pref[frt] - bckPref;
-            System.out.println(sum);
             if (sum >= target) {
                 if (res == 0) res = frt - bck + 1;
                 else res = Math.min(res, frt - bck + 1);
