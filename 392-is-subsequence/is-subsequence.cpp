@@ -2,21 +2,23 @@ class Solution {
 public:
     bool isSubsequence(string s, string t) {
         ios::sync_with_stdio(0); cin.tie(0);
-        int sptr = 0;
-
-        for(int i = 0; i < t.length(); i++) {
-            if (sptr == s.length()) {
+        int sPtr = 0, tPtr = 0;
+        while(tPtr < t.size()) {   
+            if (s[sPtr] == t[tPtr]) {
+                sPtr++;
+            }
+            tPtr++;
+            if (sPtr == s.size()) {
                 return true;
             }
+        }
 
-            if (t[i] == s[sptr]) {
-                sptr++;
+        if (sPtr == s.size()) {
+                return true;
             }
-        }
-
-        if (sptr == s.length()) {
-            return true;
-        }
         return false;
     }
 };
+
+// a b c
+// a h b g d c
