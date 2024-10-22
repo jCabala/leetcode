@@ -1,14 +1,16 @@
 class Solution {
 public:
-    int dpHold[30001], dpNo[30001];
     int maxProfit(vector<int>& prices) {
-        dpHold[0] = -prices[0];
-        
+        vector<int> own, notOwn;
+
+        own.push_back(-prices[0]);
+        notOwn.push_back(0);
+
         for (int i = 1; i < prices.size(); i++) {
-            dpHold[i] = max(dpHold[i-1], dpNo[i-1] - prices[i]);
-            dpNo[i] = max(dpNo[i-1], dpHold[i-1] + prices[i]);
+            own.push_back(max(own[i-1], notOwn[i-1] - prices[i]));
+            notOwn.push_back(max(notOwn[i-1], own[i-1] + prices[i]));
         }
 
-        return dpNo[prices.size() - 1];
+        return notOwn[notOwn.size() - 1];
     }
 };
